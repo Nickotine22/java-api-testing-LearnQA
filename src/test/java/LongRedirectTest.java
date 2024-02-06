@@ -5,19 +5,10 @@ import org.junit.jupiter.api.Test;
 public class LongRedirectTest {
     @Test
     public void RedirectTest() {
-        Response response = RestAssured
-                .given()
-                .redirects()
-                .follow(false)
-                .when()
-                .get("https://playground.learnqa.ru/api/long_redirect")
-                .andReturn();
+        Response response;
+        String location = "https://playground.learnqa.ru/api/long_redirect";
 
-        int statusCode = response.getStatusCode();
-        String location = response.getHeader("Location");
-        System.out.println(location);
-
-        while (statusCode != 200) {
+        do {
             response = RestAssured
                     .given()
                     .redirects()
@@ -26,8 +17,11 @@ public class LongRedirectTest {
                     .get(location)
                     .andReturn();
 
+            int statusCode = response.getStatusCode();
             location = response.getHeader("Location");
-            System.out.println(location);
-        }
+            if (location != null) {
+                System.out.println(location);
+            }
+        } while (response.getStatusCode() != 200);
     }
 }
