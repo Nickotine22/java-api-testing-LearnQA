@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class LongRedirectTest {
     @Test
-    public void RedirectTest() {
+    public void LongRedirectTest() {
         Response response;
         String location = "https://playground.learnqa.ru/api/long_redirect";
 
