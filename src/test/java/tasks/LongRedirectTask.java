@@ -1,10 +1,12 @@
+package tasks;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-public class LongRedirectTest {
+public class LongRedirectTask {
     @Test
-    public void LongRedirectTest() {
+    public void LongRedirectTask() {
         Response response;
         String location = "https://playground.learnqa.ru/api/long_redirect";
 

@@ -1,11 +1,13 @@
+package tasks;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.Test;
 import java.lang.Thread;
 
-public class TokenTest {
+public class TokenTask {
     @Test
-    public void TokenTest() throws InterruptedException {
+    public void TokenTask() throws InterruptedException {
 
         JsonPath response = RestAssured
                 .get("https://playground.learnqa.ru/ajax/api/longtime_job")

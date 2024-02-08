@@ -1,11 +1,13 @@
+package tasks;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-public class RedirectTest {
+public class RedirectTask {
 
     @Test
-    public void RedirectTest(){
+    public void RedirectTask (){
     Response response = RestAssured
             .given()
             .redirects()

@@ -1,12 +1,14 @@
+package tasks;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PasswordSelectionTest {
+public class PasswordSelectionTask {
     @Test
-    public void PasswordSelection() {
+    public void PasswordSelectionTask() {
         String[] passwords = {"password", "123456", "12345678", "qwerty", "abc123", "monkey", "1234567",
                 "letmein", "trustno1", "dragon", "baseball", "111111", "iloveyou", "master", "sunshine",
                 "ashley", "bailey", "passw0rd", "shadow", "123123", "654321", "superman", "qazwsx",
