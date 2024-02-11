@@ -1,6 +1,5 @@
 package tests;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import lib.Assertions;
@@ -51,6 +50,6 @@ public class UserRegisterTest extends BaseTestCase {
                 .andReturn();
 
         Assertions.assertResponseCodeEquals(responseCreateAuth, 200);
-        Assertions.assertJsonHasKey(responseCreateAuth, "id");
+        Assertions.assertJsonHasField(responseCreateAuth, "id");
     }
 }
