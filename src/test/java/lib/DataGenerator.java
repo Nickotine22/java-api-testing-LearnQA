@@ -11,6 +11,11 @@ public class DataGenerator {
         return "learnqa" + timestamp + "@example.com";
     }
 
+    public static String getIncorrectRandomEmail() {
+        String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new java.util.Date());
+        return "learnqa" + timestamp + "example.com";
+    }
+
     public static Map<String, String> getRegistrationData() { // returns default values plus randomly generated email
         Map <String, String> data = new HashMap<>();
         data.put("email", DataGenerator.getRandomEmail());
@@ -38,4 +43,16 @@ public class DataGenerator {
         return userData;
 
     }
+
+    public static Map<String, String> getRegistrationDataWithIncorrectEmail() {
+        Map <String, String> data = new HashMap<>();
+        data.put("email", DataGenerator.getIncorrectRandomEmail());
+        data.put("password", "123");
+        data.put("username", "learnqa");
+        data.put("firstName", "learnqa");
+        data.put("lastName", "learnqa");
+
+        return data;
+    }
+
 }
