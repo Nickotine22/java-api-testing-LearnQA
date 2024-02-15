@@ -55,4 +55,26 @@ public class DataGenerator {
         return data;
     }
 
+    public static Map<String, String> getRegistrationDataWithShortUsername() {
+        Map <String, String> data = new HashMap<>();
+        data.put("email", DataGenerator.getIncorrectRandomEmail());
+        data.put("password", "123");
+        data.put("username", "l");
+        data.put("firstName", "learnqa");
+        data.put("lastName", "learnqa");
+
+        return data;
+    }
+
+    public static Map<String, String> getRegistrationDataWithLongUsername() {
+        Map <String, String> data = new HashMap<>();
+        data.put("email", DataGenerator.getIncorrectRandomEmail());
+        data.put("password", "123");
+        data.put("username", "learnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearn");
+        data.put("firstName", "learnqa");
+        data.put("lastName", "learnqa");
+
+        return data;
+    }
+
 }
