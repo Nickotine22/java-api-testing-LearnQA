@@ -68,13 +68,17 @@ public class DataGenerator {
 
     public static Map<String, String> getRegistrationDataWithLongUsername() {
         Map <String, String> data = new HashMap<>();
-        data.put("email", DataGenerator.getIncorrectRandomEmail());
-        data.put("password", "123");
-        data.put("username", "learnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearn");
+        data.put("email", DataGenerator.getRandomEmail());
+        data.put("password", "learnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqa" +
+                "learnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqa" +
+                "learnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearnqalearn");
+        data.put("username", "test");
         data.put("firstName", "learnqa");
         data.put("lastName", "learnqa");
 
         return data;
     }
+
+
 
 }
